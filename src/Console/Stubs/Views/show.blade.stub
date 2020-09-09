@@ -1,0 +1,30 @@
+@extends('layouts.app')
+
+@section('content')
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">{{ $MODELNAME->title }}</div>
+                    <div class="card-body">
+                        {{ $MODELNAME->description }}
+
+
+                        <a href="{{ $MODELNAME->id }}/edit" class="btn btn-primary">Edit MODELNAME</a>
+                        {{ Form::open([ 'method'  => 'delete', 'route' => [ 'MODELNAMEs.destroy', $MODELNAME->id ], 'onsubmit' => 'return ConfirmDelete()' ]) }}
+                        {{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}
+                        {{ Form::close() }}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function ConfirmDelete(){
+            return confirm('Are you sure? This cannot be undone!');
+        }
+    </script>
+
+@stop

@@ -1,0 +1,124 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Http\Requests\MODELNAMERequest;
+use App\MODELNAME;
+use Session;
+
+/**
+ * Class MODELNAME
+ * @package App\Http\MODELNAME
+ */
+class MODELNAMEsController extends Controller {
+
+
+    /**
+     * Display a list of all MODELNAMEs.
+     *
+     * @return  \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        $MODELNAMEs = MODELNAME::orderBy( 'id', 'ASC' )->get();
+        return view( 'MODELNAMEs.index', compact( 'MODELNAMEs' ) );
+    }
+
+
+    /**
+     * Display a single MODELNAME.
+     *
+     * @param   int $id The ID of the MODELNAME that is being viewed
+     * @return  \Illuminate\Http\Response
+     */
+    public function show( $id )
+    {
+        $MODELNAME = MODELNAME::findOrFail( $id );
+        return view( 'MODELNAMEs.show', compact( 'MODELNAME' ) );
+    }
+
+
+
+    /**
+     * Display creation form or a new MODELNAME.
+     *
+     * @return  \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        return view( 'MODELNAMEs.create' );
+    }
+
+
+    /**
+     * Display edit form or a single MODELNAME.
+     *
+     * @param   int $id The ID of the MODELNAME that is being viewed
+     * @return  \Illuminate\Http\Response
+     */
+    public function edit( $id )
+    {
+        $MODELNAME = MODELNAME::findOrFail( $id );
+
+        return view( 'MODELNAMEs.edit', compact( 'MODELNAME' ) );
+    }
+
+
+    /**
+     * Save a new MODELNAME.
+     *
+     * @param   App\Http\Requests\MODELNAMERequest $request Form Data Passed In
+     * @return  \Illuminate\Http\RedirectResponse
+     */
+    public function store( MODELNAMERequest $request )
+    {
+
+        $MODELNAME = new MODELNAME();
+        $MODELNAME->title = $request->title;
+        $MODELNAME->description = $request->description;
+        $MODELNAME->save();
+
+        Session::flash('flash_message', 'MODELNAME successfully created');
+        return redirect( 'MODELNAME' );
+
+    }
+
+
+    /**
+     * Update a single MODELNAME.
+     *
+     * @param   int $id The ID of the MODELNAME that is being udpated
+     * @param   App\Http\Requests\MODELNAMERequest $request Form Data Passed In
+     * @return  \Illuminate\Http\RedirectResponse
+     */
+    public function update( $id, MODELNAMERequest $request )
+    {
+        $MODELNAME = MODELNAME::findOrFail( $id );
+        $MODELNAME->title = $request->title;
+        $MODELNAME->description = $request->description;
+        $MODELNAME->update();
+
+        Session::flash('flash_message', 'MODELNAME successfully saved');
+        return redirect( "MODELNAME/$id" );
+    }
+
+
+    /**
+     * Delete a single MODELNAME.
+     *
+     * @param   int $id The ID of the MODELNAME that is being udpated
+     * @param   App\Http\Requests\MODELNAMERequest $request Form Data Passed In
+     * @return  \Illuminate\Http\RedirectResponse
+     */
+    public function destroy ( $id, MODELNAMERequest $request )
+    {
+
+        $MODELNAME = MODELNAME::findOrFail( $id );
+        $MODELNAME->delete();
+
+        Session::flash('flash_message', 'MODELNAME successfully deleted');
+        return redirect( "MODELNAME" );
+
+    }
+
+}

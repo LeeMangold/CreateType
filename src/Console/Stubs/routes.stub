@@ -1,0 +1,7 @@
+Route::get('/MODELNAME', 'MODELNAMEsController@index')->name('MODELNAMEs');
+Route::get('/MODELNAME/new', 'MODELNAMEsController@create')->name('MODELNAMEs.create');
+Route::post('/MODELNAME/new', 'MODELNAMEsController@store')->name('MODELNAMEs.store');
+Route::get('/MODELNAME/{id}', 'MODELNAMEsController@show')->name('MODELNAMEs.show');
+Route::get('/MODELNAME/{id}/edit', 'MODELNAMEsController@edit')->name('MODELNAMEs.edit');
+Route::patch('/MODELNAME/{id}/update', 'MODELNAMEsController@update')->name('MODELNAMEs.update');
+Route::delete('/MODELNAME/{id}', 'MODELNAMEsController@destroy')->name('MODELNAMEs.destroy');

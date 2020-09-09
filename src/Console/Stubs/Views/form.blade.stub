@@ -1,0 +1,17 @@
+<!-- Title Form Input -->
+<div class="form-group">
+    {!! Form::label('title', 'Title:') !!}
+    {!! Form::text('title', null, ['class'=>'form-control']) !!}
+</div>
+
+<!-- Description Form Input -->
+<div class="form-group">
+    {!! Form::label('description', 'Description:') !!}
+    {!! Form::textarea('description', null, ['class'=>'form-control', 'size' => '30x5']) !!}
+</div>
+
+<div class="card-footer">
+<div class="form-group">
+    {!! Form::submit($submitButton, ['class'=>'btn btn-primary form-control']) !!}
+</div>
+</div>

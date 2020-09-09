@@ -1,0 +1,22 @@
+<?php
+
+namespace App;
+
+use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Model;
+
+class MODELNAME extends Model {
+
+    protected $fillable  = ['title', 'description'];
+
+    public static function getCount()
+    {
+        return DB::table(strtolower('MODELNAME'))->count();
+    }
+    
+    public function scopeBeginsWith( $query, $field, $value )
+    {
+        return $query->where($field, 'LIKE', "$value%");
+    }
+
+}

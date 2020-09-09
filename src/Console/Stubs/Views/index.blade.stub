@@ -1,0 +1,44 @@
+@extends('layouts.app')
+
+@section('content')
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">MODELNAMEs</div>
+                    <div class="card-body">
+
+
+                        <a href="{{route('MODELNAMEs.create')}}" class="btn btn-primary">Add MODELNAME</a>
+
+                        <table class="table table-striped table-bordered table-hover table-condensed">
+                            <thead>
+                            <tr>
+                                <td>Title</td>
+                                <td>Description</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+                            @foreach ($MODELNAMEs as $MODELNAME)
+
+                                <tr>
+                                    <td>
+                                        <a href="{{action('MODELNAMEsController@show', [$MODELNAME->id])}}">{{$MODELNAME->title}}</a>
+                                    </td>
+                                    <td>{{ $MODELNAME->description }}</td>
+                                </tr>
+
+                            @endforeach
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+@stop
