@@ -41,7 +41,7 @@ class createType extends Command
         $this->line("\t$name Controller was Created!");
 
         $requestStub = $this->createTemplate( $name, 'Request' );
-        file_put_contents(app_path("Http/Requests/{$name}Request.php"), $requestStub);
+        force_file_put_contents(app_path("Http/Requests/{$name}Request.php"), $requestStub);
         $this->line("\t$name Request was Created!");
 
         $migration_name=date("Y_m_d_His") . "_create_{$name}s_table.php";
