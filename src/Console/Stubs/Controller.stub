@@ -79,7 +79,7 @@ class MODELNAMEsController extends Controller {
         $MODELNAME->save();
 
         Session::flash('flash_message', 'MODELNAME successfully created');
-        return redirect( 'MODELNAME' );
+	return redirect()->route("MODELNAMEs");
 
     }
 
@@ -99,7 +99,7 @@ class MODELNAMEsController extends Controller {
         $MODELNAME->update();
 
         Session::flash('flash_message', 'MODELNAME successfully saved');
-        return redirect( "MODELNAME/$id" );
+        return redirect()->route("MODELNAMEs", ["id"=>$id] );
     }
 
 
@@ -117,7 +117,7 @@ class MODELNAMEsController extends Controller {
         $MODELNAME->delete();
 
         Session::flash('flash_message', 'MODELNAME successfully deleted');
-        return redirect( "MODELNAME" );
+	return redirect()->route("MODELNAMEs");
 
     }
 

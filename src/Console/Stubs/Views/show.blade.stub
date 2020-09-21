@@ -15,7 +15,7 @@
                     <div class="card-body">
                         {{ $MODELNAME->description }}
 
-
+			<br><br>
                         <a href="{{ $MODELNAME->id }}/edit" class="btn btn-primary">Edit MODELNAME</a>
                         {{ Form::open([ 'method'  => 'delete', 'route' => [ 'MODELNAMEs.destroy', $MODELNAME->id ], 'onsubmit' => 'return ConfirmDelete()' ]) }}
                         {{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}
