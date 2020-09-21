@@ -1,11 +1,17 @@
 @extends('layout.master')
 
 @section('content')
-    <div class="container">
+    <nav class="page-breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Edit MODELNAME</li>
+        </ol>
+    </nav>
+
+	<h1>Edit MODELNAME {!! $MODELNAME->title !!}</h1>
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Edit MODELNAME {!! $MODELNAME->title !!}</div>
                     <div class="panel-body">
 
 
@@ -21,7 +27,6 @@
                 </div>
             </div>
         </div>
-    </div>
 
 
 @stop

@@ -1,11 +1,17 @@
 @extends('layout.master')
 
 @section('content')
-    <div class="container">
+    <nav class="page-breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Create a New MODELNAME</li>
+        </ol>
+    </nav>
+
+	<h1>Create a New MODELNAME</h1>
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header">Create a New MODELNAME</div>
                     <div class="card-body">
 
 
@@ -21,6 +27,5 @@
                 </div>
             </div>
         </div>
-    </div>
 
 @stop
