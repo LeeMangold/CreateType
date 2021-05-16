@@ -33,7 +33,7 @@ class createType extends Command
         $this->info("Generating CRUD for $name");
 
         $modelStub = $this->createTemplate( $name, 'Model' );
-        file_put_contents(app_path("{$name}.php"), $modelStub);
+        file_put_contents(app_path("Models/{$name}.php"), $modelStub);
         $this->line("\t$name Model was Created!");
 
         $contollerStub = $this->createTemplate( $name, 'Controller' );
