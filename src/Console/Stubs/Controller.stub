@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\MODELNAMERequest;
-use App\MODELNAME;
+use App\Models\MODELNAME;
 use Session;
 
 /**
