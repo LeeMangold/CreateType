@@ -29,6 +29,6 @@ class CreateMODELNAMEsTable extends Migration {
      */
     public function down()
     {
-        Schema::dropIfExists( 'MODELNAME' );
+        Schema::dropIfExists( 'MODELNAMEs' );
     }
 }
