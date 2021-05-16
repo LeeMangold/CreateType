@@ -4,8 +4,12 @@ namespace App\Models;
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class MODELNAME extends Model {
+
+    use HasFactory, Notifiable;
 
     protected $fillable  = ['title', 'description'];
 
