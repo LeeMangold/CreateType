@@ -1,6 +1,6 @@
 {
     "name": "leemangold/createtype",
-    "description": ":package_description",
+    "description": "This package creates CRUD templates for Laravel for a given entity/model type",
     "license": "MIT",
     "authors": [
         {
