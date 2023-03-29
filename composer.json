@@ -1,7 +1,7 @@
 {
     "name": "leemangold/createtype",
     "description": ":package_description",
-    "license": "private",
+    "license": "MIT",
     "authors": [
         {
             "name": "Lee Mangold",
