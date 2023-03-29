@@ -35,23 +35,18 @@ Please see [contributing.md](contributing.md) for details and a todolist.
 
 If you discover any security related issues, please email author email instead of using the issue tracker.
 
-## Credits
-
-- [Lee Mangold][leemangold.com]
-- [All Contributors][link-contributors]
-
 ## License
 
-license. Please see the [license file](license.md) for more information.
+MIT license. Please see the [license file](license.md) for more information.
 
 [ico-version]: https://img.shields.io/packagist/v/leemangold/createtype.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/leemangold/createtype.svg?style=flat-square
 [ico-travis]: https://img.shields.io/travis/leemangold/createtype/master.svg?style=flat-square
-[ico-styleci]: https://styleci.io/repos/12345678/shield
+[ico-styleci]: https://styleci.io/repos/294134718/shield
 
 [link-packagist]: https://packagist.org/packages/leemangold/createtype
 [link-downloads]: https://packagist.org/packages/leemangold/createtype
 [link-travis]: https://travis-ci.org/leemangold/createtype
-[link-styleci]: https://styleci.io/repos/12345678
+[link-styleci]: https://styleci.io/repos/294134718
 [link-author]: https://github.com/leemangold
 [link-contributors]: ../../contributors
